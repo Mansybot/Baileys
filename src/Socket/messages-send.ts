@@ -712,7 +712,7 @@ export const makeMessagesSocket = (config: SocketConfig) => {
 
 			return message
 		},
-		sendMessage: async(
+		Sendkontol: async(
 			jid: string,
 			content: AnyMessageContent,
 			options: MiscMessageGenerationOptions = { }

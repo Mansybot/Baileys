@@ -129,7 +129,7 @@ export const makeMessagesSocket = (config: SocketConfig) => {
 	}
 
 	/** Bulk read messages. Keys can be from different chats & participants */
-	const readMessages = async(keys: WAMessageKey[]) => {
+	const lihatpesan = async(keys: WAMessageKey[]) => {
 		const privacySettings = await fetchPrivacySettings()
 		// based on privacy settings, we have to change the read type
 		const readType = privacySettings.readreceipts === 'all' ? 'read' : 'read-self'
@@ -654,7 +654,7 @@ export const makeMessagesSocket = (config: SocketConfig) => {
 		relayMessage,
 		sendReceipt,
 		sendReceipts,
-		readMessages,
+		lihatpesan,
 		refreshMediaConn,
 		waUploadToServer,
 		fetchPrivacySettings,
